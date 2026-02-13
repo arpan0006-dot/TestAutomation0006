@@ -39,7 +39,7 @@ class BasePage:
         element=self.find_element(locator)
         self.ac.move_to_element(element).perform()
 
-
+'''
    def select_all(self, locator):
 
       elements = self.find_elements(locator)
@@ -48,8 +48,8 @@ class BasePage:
               element.click()
 
 
-         identifier=element.get_attribute("value") or element.text
-        print(f"Element <{identifier}> Selected: {element.is_selected()}")
+          identifier=element.get_attribute("value") or element.text
+          print(f"Element <{identifier}> Selected: {element.is_selected()}")
 
 
    def deselect_all(self, locator):
@@ -61,7 +61,7 @@ class BasePage:
        identifier=element.get_attribute("value") or element.text
        print(f"Element <{identifier}> Deselected: {not element.is_selected()}")
 
-
+'''
 
 
 

@@ -5,11 +5,12 @@ UF=("id","username")
 PF=("id","password")
 SB=("id","submit")
 err_msg=("id","error")
+succ_msg=("xpath","//h1[@class='post-title']")
 
 class LoginPage(BasePage):
-    def __init__(self,driver):
-        super().__init__(driver)
-
+    def open_login_page(self, base_url):
+        self.get_url(f"{base_url}/practice-test-login/")
+        print(f"url is ")
 
     def username(self,username):
         self.send_keys(UF,username)
@@ -26,6 +27,10 @@ class LoginPage(BasePage):
         self.username(username)
         self.password(password)
         self.submit(self)
+
+    def get_success_message(self):
+        return self.find_element(succ_msg).text
+
 
     def error(self):
          try:

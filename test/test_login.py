@@ -21,10 +21,14 @@ from pages.login_page import LoginPage
 #
 #
 
-def test_valid_login(driver):
-    login_page=LoginPage(driver)
-    login_page.login("student","Password123")
-    assert "logged-in-successfully" in driver.current_url,login_page.error()
+
+
+def test_valid_login(driver, config):
+    login_page = LoginPage(driver)
+    login_page.open_login_page(config["base_url"])
+    login_page.login(config["valid_username"], config["valid_password"])
+    assert "Logged In Successfully" in login_page.get_success_message()
+
 
 def test_invalid_login(driver):
     login_page=LoginPage(driver)

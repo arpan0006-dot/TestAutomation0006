@@ -10,13 +10,20 @@ environments:
     password: "NA"
 
   practice:
-    base_url: "https://practicetestautomation.com/practice-test-login/"
+    base_url: "https://practicetestautomation.com/"
     browser: "chrome"
     valid_username: "student"
     valid_password: "Password123"
     invalid_username: "wronguser"
     invalid_password: "wrongpass"
 
+  practice_blogspot:
+    base_url: "https://testautomationpractice.blogspot.com/"
+    browser: "firefox"
+    valid_name: "Mukesh Ambani"
+    valid_email: "mukesh_ambani@reliance.com"
+    valid_phone: 9999911111
+    valid_address: "123 Antilla ,Reliance Road, Mumbai ,Maharashtra"
 #  default_env: qa
 
 #  qa:
