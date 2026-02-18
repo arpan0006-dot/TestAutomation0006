@@ -9,7 +9,7 @@ succ_msg=("xpath","//h1[@class='post-title']")
 
 class LoginPage(BasePage):
     def open_login_page(self, base_url):
-        self.get_url(f"{base_url}/practice-test-login/")
+        self.get_url(f"{base_url}practice-test-login/")
         print(f"url is ")
 
     def username(self,username):
